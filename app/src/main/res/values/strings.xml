@@ -92,4 +92,8 @@
     <string name="action_settings">Settings</string>
     <string name="ListView">List View</string>
     <string name="stagView">stagView</string>
+
+    <string name="title_activity_detail">DetailActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>
