@@ -35,25 +35,33 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
+    private Menu mMenu;
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
+
+
         return true;
     }
+
 
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
+//        if (mMenu != null) {
+//            MenuItem item1 = mMenu.findItem(R.id.linearView);
+//            if (item1 != null) {
+//                item1.setVisible(false);
+//            }
+//        }
 
         switch (id) {
             case R.id.linearView:
-                mState=1;
+
                 LinearLayoutManager linearlayoutMang = new LinearLayoutManager(this);
                 linearlayoutMang.setOrientation(LinearLayoutManager.VERTICAL);
 //                recyclerView.setLayoutManager(linearlayoutMang);
-                setVisible(false);
 
                 break;
             case R.id.staggerdView:
