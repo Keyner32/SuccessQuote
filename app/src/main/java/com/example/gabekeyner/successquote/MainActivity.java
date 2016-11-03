@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
@@ -59,6 +60,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        initViews();
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -68,9 +71,10 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        recyclerView = (RecyclerView)findViewById(R.id.recyclerView);
     }
 
-    private Menu mMenu;
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -80,9 +84,19 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    private void initViews() {
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        recyclerView.setHasFixedSize(true);
+        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getApplicationContext(), 2);
+        recyclerView.setLayoutManager(layoutManager);
+        ArrayList<QuoteHelper> quoteHelpers = prepareData();
+        Adapter adapter = new Adapter(getApplicationContext(), quoteHelpers);
+        recyclerView.setAdapter(adapter);
+    }
+
     private ArrayList<QuoteHelper> prepareData() {
         ArrayList<QuoteHelper> quoteHelpers = new ArrayList<>();
-        for (int i = 0; i <quote_authors.length; i++) {
+        for (int i = 0; i < quote_authors.length; i++) {
             QuoteHelper quoteHelper = new QuoteHelper();
             quoteHelper.setAuthor(quote_authors[i]);
             quoteHelper.setQuote_body(quote_body[i]);
@@ -107,11 +121,9 @@ public class MainActivity extends AppCompatActivity {
 
         switch (id) {
             case R.id.linearView:
-
                 LinearLayoutManager linearlayoutMang = new LinearLayoutManager(this);
                 linearlayoutMang.setOrientation(LinearLayoutManager.VERTICAL);
                 recyclerView.setLayoutManager(linearlayoutMang);
-
                 break;
             case R.id.staggerdView:
                 StaggeredGridLayoutManager staggeredGridLayoutMang = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);

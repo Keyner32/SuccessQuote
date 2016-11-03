@@ -10,11 +10,12 @@
     tools:showIn="@layout/activity_main">
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/cardView"
-        android:scrollbars="vertical"
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
 
     </android.support.v7.widget.RecyclerView>
+
 
 </android.support.v4.widget.NestedScrollView>

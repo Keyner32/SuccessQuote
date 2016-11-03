@@ -2,12 +2,12 @@ package com.example.gabekeyner.successquote;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -19,7 +19,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
     private ArrayList<QuoteHelper> quotes;
     private Context context;
-    CardView cardView;
     int prevPos = 0;
 
     public Adapter(Context context, ArrayList<QuoteHelper> quotes) {
@@ -41,11 +40,39 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         holder.bodyText.setText(quote.getQuote_body());
         holder.categoryText.setText(quote.getQuote_category());
 
-        cardView = (CardView) cardView.findViewById(R.id.cardView);
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
+        if(position > prevPos){
+
+            //put animation here
+        }else {
+            //put animation here
+        }
+        prevPos = position;
+        int lastPosition = -1;
+        //Animation to authorText
+        //Animation to bodyText
+        //Animation to categoryText
+
+
+
+        holder.authorText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openDetailActivity(quote.getAuthor(),quote.getQuote_body(),quote.getQuote_category());
+                Toast.makeText(context, "More on " + quote.getAuthor(), Toast.LENGTH_SHORT).show();
+            }
+        });
+        holder.bodyText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openDetailActivity(quote.getAuthor(),quote.getQuote_body(),quote.getQuote_category());
+                Toast.makeText(context, "More on " + quote.getAuthor(), Toast.LENGTH_SHORT).show();
+            }
+        });
+        holder.categoryText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openDetailActivity(quote.getAuthor(),quote.getQuote_body(),quote.getQuote_category());
+                Toast.makeText(context, "More on " + quote.getAuthor(), Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -71,6 +98,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         public TextView authorText, bodyText, categoryText;
+
 
         public ViewHolder(final View itemView) {
             super(itemView);
