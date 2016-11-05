@@ -43,6 +43,6 @@
         app:layout_anchor="@id/app_bar"
         app:layout_anchorGravity="bottom|end"
         android:tint="@color/colorPrimaryDark"
-        app:srcCompat="?android:attr/actionModeShareDrawable"/>
+        app:srcCompat="@android:drawable/ic_menu_edit"/>
 
 </android.support.design.widget.CoordinatorLayout>

@@ -9,7 +9,11 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
  * Created by GabeKeyner on 11/2/2016.
@@ -29,7 +33,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_view,parent,false);
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_view, parent, false);
         return new ViewHolder(itemView);
     }
 
@@ -37,13 +41,20 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     public void onBindViewHolder(final Adapter.ViewHolder holder, final int position) {
         final QuoteHelper quote = quotes.get(position);
         holder.authorText.setText(quote.getAuthor());
-        holder.bodyText.setText(quote.getQuote_body());
         holder.categoryText.setText(quote.getQuote_category());
 
-        if(position > prevPos){
+        PicassoClient.downloadImage(context, quote.getAuthor_picture(),holder.authorImage);
+        Picasso.with(context)
+                .load(quotes.get(position)
+                .getAuthor_picture())
+//                .resize(800, 500)
+//                .centerCrop()
+                .into(holder.authorImage);
+
+        if (position > prevPos) {
 
             //put animation here
-        }else {
+        } else {
             //put animation here
         }
         prevPos = position;
@@ -53,25 +64,26 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         //Animation to categoryText
 
 
+        //TODO INSTEAD OF THESE CLICK LISTENERS SET TO THE TEXTVIEWS THEY WILL BE SET ON THE POSITIONS ONCE THE ANIMATIONS ARE SET UP
 
         holder.authorText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openDetailActivity(quote.getAuthor(),quote.getQuote_body(),quote.getQuote_category());
+                openDetailActivity(quote.getAuthor(), quote.getAuthor_picture(), quote.getQuote_category());
                 Toast.makeText(context, "More on " + quote.getAuthor(), Toast.LENGTH_SHORT).show();
             }
         });
-        holder.bodyText.setOnClickListener(new View.OnClickListener() {
+        holder.authorImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openDetailActivity(quote.getAuthor(),quote.getQuote_body(),quote.getQuote_category());
+                openDetailActivity(quote.getAuthor(), quote.getAuthor_picture(), quote.getQuote_category());
                 Toast.makeText(context, "More on " + quote.getAuthor(), Toast.LENGTH_SHORT).show();
             }
         });
         holder.categoryText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openDetailActivity(quote.getAuthor(),quote.getQuote_body(),quote.getQuote_category());
+                openDetailActivity(quote.getAuthor(), quote.getAuthor_picture(), quote.getQuote_category());
                 Toast.makeText(context, "More on " + quote.getAuthor(), Toast.LENGTH_SHORT).show();
             }
         });
@@ -86,18 +98,20 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     public int getItemCount() {
         return quotes.size();
     }
-    private void openDetailActivity (String author, String quote_body, String quote_category) {
-        Intent intent = new Intent(context,DetailActivity.class);
-        intent.putExtra("author",author);
-        intent.putExtra("quote_body", quote_body);
-        intent.putExtra("quote_catergory",quote_category);
+
+    private void openDetailActivity(String author, String author_picture, String quote_category) {
+        Intent intent = new Intent(context, DetailActivity.class);
+        intent.putExtra("author", author);
+        intent.putExtra("author_picture",author_picture );
+        intent.putExtra("quote_catergory", quote_category);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        public TextView authorText, bodyText, categoryText;
+        public TextView authorText, categoryText;
+        public CircleImageView authorImage;
 
 
         public ViewHolder(final View itemView) {
@@ -109,9 +123,9 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
                 }
             });
-            authorText = (TextView) itemView.findViewById(R.id.textAuthor) ;
-            bodyText = (TextView)itemView.findViewById(R.id.textBody) ;
-            categoryText = (TextView)itemView.findViewById(R.id.textCategory) ;
+            authorText = (TextView) itemView.findViewById(R.id.textAuthor);
+            authorImage = (CircleImageView) itemView.findViewById(R.id.author_picture);
+            categoryText = (TextView) itemView.findViewById(R.id.textCategory);
         }
     }
 }

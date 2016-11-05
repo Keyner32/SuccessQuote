@@ -30,16 +30,16 @@ public class MainActivity extends AppCompatActivity {
             "Elon Musk",
             "Jim Rohn"
     };
-    private final String quote_body[] = {
-            "When you want to succeed as bad as you want to breathe, then youll be successful.",
-            "Dont let someone elses opinion of you become your reality.",
-            "If you do what youve always done, youll get what youve always gotten.",
-            "The challenges in our lives are there to strengthen our convictions. They are NOT there to run us over.",
-            "Strength does not come from winning. Your struggles develop your strengths. When you go through hardships and decide not to surrender, that is strength.",
-            "What you get by achieving your goals is not as important as what you become by achieving your goals.",
-            "Be miserable. Or motivate yourself. Whatever has to be done, its always your choice.",
-            "When something is important enough, you do it even if the odds are not in your favor.",
-            "If you dont design your own life plan, chances are youll fall into someone elses plan. And guess what they have planned for you? Not much."
+    private final String author_picture[] = {
+            "http://speakerdata.s3.amazonaws.com/photo/image/839766/Eric_Thomas_Teena_Cathey.jpg",
+            "http://i.ytimg.com/vi/8kWPbB672_g/maxresdefault.jpg",
+            "https://pbs.twimg.com/profile_images/540248015571660800/9qXSC-X9.png",
+            "https://www.steemimg.com/images/2016/09/05/nickvijucic334cd.jpg",
+            "http://www.ew.com/sites/default/files/i/2015/03/02/arnold-schwarzenegger_0.jpg",
+            "http://www.workingvoices.com/wp-content/uploads/zig_ziglar.jpg",
+            "http://www.klru.org/wp-content/uploads/2013/02/drwayne.jpg",
+            "https://pi.tedcdn.com/r/pe.tedcdn.com/images/ted/2534551796ee0a2638b462ce82e33b65091b1d42_1600x1200.jpg?cb=05112016&quality=89&w=800",
+            "http://dicasdosalgueiro.pt/wp-content/uploads/2016/01/Darren_Hardy_Interviews_Jim_Rohn_0.jpg"
     };
     private final String quote_category[] = {
             "Motivational",
@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
         for (int i = 0; i < quote_authors.length; i++) {
             QuoteHelper quoteHelper = new QuoteHelper();
             quoteHelper.setAuthor(quote_authors[i]);
-            quoteHelper.setQuote_body(quote_body[i]);
+            quoteHelper.setAuthor_picture(author_picture[i]);
             quoteHelper.setQuote_category(quote_category[i]);
             quoteHelpers.add(quoteHelper);
 
