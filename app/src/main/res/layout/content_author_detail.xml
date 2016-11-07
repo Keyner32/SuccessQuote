@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.cleveroad.bubbleanimation.BubbleAnimationLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_detailed"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:background="@android:color/darker_gray"
+    android:paddingBottom="@dimen/padding_s"
+    android:paddingEnd="@dimen/padding_m"
+    android:paddingStart="@dimen/padding_m"
+    app:bav_animation_color="@color/colorPrimary"
+    app:bav_indicator_width="@dimen/indicator_width"
+    tools:showIn="@layout/activity_author_detail"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.gabekeyner.successquote.AuthorDetailActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_size"
+
+        android:background="@android:color/white"
+        app:bav_view_type="base_container">
+
+
+        <TextView
+            android:id="@+id/detail_quote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-smallcaps"
+            android:maxLines="3"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
+            android:textStyle="normal|italic"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/detail_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:maxLines="1"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/fl_context_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bav_view_type="context_container"
+        >
+
+        <ImageView
+            android:id="@+id/iv_share"
+            android:layout_width="@dimen/action_button_size"
+            android:layout_height="@dimen/action_button_size"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/padding_h"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_share"
+            android:transitionName="@string/call"
+            />
+
+        <ImageView
+            android:id="@+id/iv_expand"
+            android:layout_width="@dimen/action_button_size"
+            android:layout_height="@dimen/action_button_size"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/padding_m"
+            android:layout_marginStart="@dimen/padding_m"
+            android:layout_toStartOf="@id/iv_share"
+            android:padding="16dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_expand"
+            android:transitionName="@string/write"
+            />
+
+        <ImageView
+            android:id="@+id/iv_internet"
+            android:layout_width="@dimen/action_button_size"
+            android:layout_height="@dimen/action_button_size"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/iv_expand"
+            android:padding="@dimen/padding_h"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_bio"
+            android:transitionName="@string/favorite"
+            />
+
+    </RelativeLayout>
+
+
+</com.cleveroad.bubbleanimation.BubbleAnimationLayout>

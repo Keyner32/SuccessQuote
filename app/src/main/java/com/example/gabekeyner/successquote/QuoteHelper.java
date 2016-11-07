@@ -12,12 +12,22 @@ public class QuoteHelper {
 
     String quote_category;
 
+    String quote_body;
+
+
 
     public String getAuthor() {
 
         return author;
     }
 
+    public String getQuote_body() {
+        return quote_body;
+    }
+
+    public void setQuote_body(String quote_body) {
+        this.quote_body = quote_body;
+    }
 
     public String getQuote_category() {
         return quote_category;
@@ -37,20 +47,6 @@ public class QuoteHelper {
 
     public void setQuote_category(String quote_category) {
         this.quote_category = quote_category;
-    }
-
-
-    public class QuoteHelperBody {
-
-        String quote_body;
-
-        public String getQuote_body() {
-            return quote_body;
-        }
-
-        public void setQuote_body(String quote_body) {
-            this.quote_body = quote_body;
-        }
     }
 
 }

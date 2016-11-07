@@ -33,4 +33,5 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha9'
     compile files('libs/CircleImageView/CircleImageView-master/gradle/wrapper/gradle-wrapper.jar')
     compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.cleveroad:bubbleanimation-layout:1.0.0'
 }

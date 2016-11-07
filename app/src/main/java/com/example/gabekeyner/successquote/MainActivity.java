@@ -26,13 +26,13 @@ public class MainActivity extends AppCompatActivity {
             "Nick Vujicic",
             "Arnold Schwarzenegger",
             "Zig Ziglar",
-            "Dr.Wayne W.Dyer",
+            "Dr. Wayne W.Dyer",
             "Elon Musk",
             "Jim Rohn"
     };
     private final String author_picture[] = {
             "http://speakerdata.s3.amazonaws.com/photo/image/839766/Eric_Thomas_Teena_Cathey.jpg",
-            "http://i.ytimg.com/vi/8kWPbB672_g/maxresdefault.jpg",
+            "https://pbs.twimg.com/profile_images/414511932063096832/9h-nqTVk.jpeg",
             "https://pbs.twimg.com/profile_images/540248015571660800/9qXSC-X9.png",
             "https://www.steemimg.com/images/2016/09/05/nickvijucic334cd.jpg",
             "http://www.ew.com/sites/default/files/i/2015/03/02/arnold-schwarzenegger_0.jpg",
@@ -52,6 +52,19 @@ public class MainActivity extends AppCompatActivity {
             "Entrepreneur",
             "Mindset"
     };
+    private final String quote_body[] = {
+            "\"When you want to succeed as bad as you want to breathe, then youll be successful.\"",
+            "\"Dont let someone elses opinion of you become your reality.\"",
+            "\"If you do what youve always done, youll get what youve always gotten.\"",
+            "\"The challenges in our lives are there to strengthen our convictions. They are NOT there to run us over.\"",
+            "\"Strength does not come from winning. Your struggles develop your strengths. When you go through hardships and decide not to surrender, that is strength.\"",
+            "\"What you get by achieving your goals is not as important as what you become by achieving your goals.\"",
+            "\"Be miserable. Or motivate yourself. Whatever has to be done, its always your choice.\"",
+            "\"When something is important enough, you do it even if the odds are not in your favor.\"",
+            "\"If you dont design your own life plan, chances are youll fall into someone elses plan. And guess what they have planned for you? Not much.\""
+    };
+
+
 
 
     @Override
@@ -67,8 +80,11 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "This Button Will Share to FaceBook or Twitter ", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "This Button Will add a new quote to the recyclerview", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+
+                //TODO PUT METHOD THAT BRINGS UP EITHER A DIALOG BUILDER OR NEW ACTIVITY (MORE LIKELY)
+
             }
         });
         recyclerView = (RecyclerView)findViewById(R.id.recyclerView);
@@ -87,13 +103,18 @@ public class MainActivity extends AppCompatActivity {
     private void initViews() {
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
-        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getApplicationContext(), 2);
+        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getApplicationContext(), 1);
         recyclerView.setLayoutManager(layoutManager);
+
         ArrayList<QuoteHelper> quoteHelpers = prepareData();
         Adapter adapter = new Adapter(getApplicationContext(), quoteHelpers);
         recyclerView.setAdapter(adapter);
+//
+//        ArrayList<QuoteHelperBody> quoteHelperBodies = prepareDataBody();
+//        AdapterBody adapterBody = new AdapterBody(getApplicationContext(),quoteHelperBodies);
+//        recyclerView.setAdapter(adapterBody);
     }
-
+//
     private ArrayList<QuoteHelper> prepareData() {
         ArrayList<QuoteHelper> quoteHelpers = new ArrayList<>();
         for (int i = 0; i < quote_authors.length; i++) {
@@ -101,6 +122,7 @@ public class MainActivity extends AppCompatActivity {
             quoteHelper.setAuthor(quote_authors[i]);
             quoteHelper.setAuthor_picture(author_picture[i]);
             quoteHelper.setQuote_category(quote_category[i]);
+            quoteHelper.setQuote_body(quote_body[i]);
             quoteHelpers.add(quoteHelper);
 
 
@@ -109,15 +131,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-//        if (mMenu != null) {
-//            MenuItem item1 = mMenu.findItem(R.id.linearView);
-//            if (item1 != null) {
-//                item1.setVisible(false);
-//            }
-//        }
+
+
 
         switch (id) {
             case R.id.linearView:
@@ -130,6 +149,7 @@ public class MainActivity extends AppCompatActivity {
                 recyclerView.setLayoutManager(staggeredGridLayoutMang);
                 break;
         }
+
 
 
         return super.onOptionsItemSelected(item);
