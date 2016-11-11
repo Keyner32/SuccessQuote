@@ -1,6 +1,6 @@
 
 # Success Q
-<img src ="https://github.com/Keyner32/Nostalgia/blob/master/Nostalgia_icon_final.png?raw=true" alt="Pin Icon" width="200" height="200">
+<img src ="https://github.com/Keyner32/SuccessQuote/blob/master/basicKey.png?raw=true" alt="Pin Icon" width="200" height="200">
 ## Motivation
  Success Q : is a application that will give you the inspiratiion to become a successful person in life.
 
