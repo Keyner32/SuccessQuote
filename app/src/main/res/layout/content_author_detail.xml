@@ -21,13 +21,14 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/list_item_size"
-
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
         android:background="@android:color/white"
         app:bav_view_type="base_container">
 
 
         <TextView
-            android:id="@+id/detail_quote"
+            android:id="@+id/detail_quote2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-smallcaps"

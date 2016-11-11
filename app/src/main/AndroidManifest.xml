@@ -38,6 +38,10 @@
             android:label=""
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
+        <activity android:name=".PostDialogActivity">
+        </activity>
+        <activity android:name=".SignInActivity">
+        </activity>
     </application>
 
 </manifest>

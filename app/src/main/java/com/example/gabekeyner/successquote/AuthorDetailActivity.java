@@ -21,7 +21,7 @@ public class AuthorDetailActivity extends AppCompatActivity {
     CircleImageView author_head;
     public BubbleAnimationLayout mBalBaseView;
     Animation fade_in;
-
+    private String[] arraySpinner;
 
 
     @Override
@@ -31,12 +31,10 @@ public class AuthorDetailActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-//        mBalBaseView.showContextView();
-
 
         author_head = (CircleImageView) findViewById(R.id.author_head_pic);
         authorText = (TextView) findViewById(R.id.author_head_name);
-        bodyText = (TextView) findViewById(R.id.detail_quote);
+        bodyText = (TextView) findViewById(R.id.detail_quote2);
         categoryText = (TextView) findViewById(R.id.detail_category);
 
         fade_in = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_in_detail);
@@ -57,7 +55,7 @@ public class AuthorDetailActivity extends AppCompatActivity {
         categoryText.setText(quote_category);
         PicassoClient.downloadImage(this, author_picture, author_head);
 
-     //  recyclerDetailView = (RecyclerView) findViewById(R.id.recycler_quote_view);
+        //  recyclerDetailView = (RecyclerView) findViewById(R.id.recycler_quote_view);
 
     }
     //---------------------------------------------------------------------

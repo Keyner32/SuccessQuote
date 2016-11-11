@@ -15,6 +15,17 @@ public class QuoteHelper {
     String quote_body;
 
 
+    public QuoteHelper()
+    {
+
+    }
+    public QuoteHelper(String author, String author_picture, String quote_category, String quote_body){
+        this.author = author;
+        this.author_picture = author_picture;
+        this.quote_category = quote_category;
+        this.quote_body = quote_body;
+    }
+
 
     public String getAuthor() {
 

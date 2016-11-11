@@ -4,6 +4,7 @@ import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.ScaleAnimation;
@@ -15,19 +16,26 @@ import java.util.Random;
  */
 
 public class AnimationUtil {
-    private final static int SCALE_DURATION = 180;
-    private final static int FADE_DURATION = 2000;
+    private final static int SCALE_DURATION = 1900;
+    private final static int SCALE_DURATION_ITEM = 1500;
+    private final static int FADE_DURATION = 2200;
 
     public static void animate(RecyclerView.ViewHolder holder, boolean goesDown){
         AnimatorSet animatorSet = new AnimatorSet();
         ObjectAnimator animatorTranslateY = ObjectAnimator.ofFloat(holder.itemView, "translationY", goesDown==true ? 800 : -800, 0);
         animatorTranslateY.setDuration(800);
         animatorSet.playTogether(animatorTranslateY);
+        animatorSet.setInterpolator(new AccelerateDecelerateInterpolator());
         animatorSet.start();
     }
-    public static void setScaleAnimation(View view) {
+    public static void setScaleAnimationImage(View view) {
         ScaleAnimation anim = new ScaleAnimation(0.0f, 1.0f, 0.0f, 1.0f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
         anim.setDuration(SCALE_DURATION);
+        view.startAnimation(anim);
+    }
+    public static void setScaleAnimationItem(View view) {
+        ScaleAnimation anim = new ScaleAnimation(0.0f, 1.0f, 0.0f, 1.0f, Animation.RELATIVE_TO_SELF, 2.0f, Animation.RELATIVE_TO_SELF, 0.5f);
+        anim.setDuration(SCALE_DURATION_ITEM);
         view.startAnimation(anim);
     }
     public static void setAnimation(View viewToAnimate, int position) {
