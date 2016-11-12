@@ -5,10 +5,10 @@
 ## Motivation
  Success Q : is a application that will give you the inspiratiion to become a successful person in life.
 
-<img src ="https://github.com/chrisdrohr/Nostalgia/blob/master/Screenshot_20161022-124647.png" alt="Screenshot" width="400" height="700">
-<img src ="https://github.com/chrisdrohr/Nostalgia/blob/master/Screenshot_20161022-124704.png" alt="Screenshot" width="400" height="700">
-<img src ="https://github.com/chrisdrohr/Nostalgia/blob/master/Screenshot_20161022-124710.png" alt="Screenshot" width="400" height="700">
-<img src ="https://github.com/chrisdrohr/Nostalgia/blob/master/Screenshot_20161022-124723.png" alt="Screenshot" width="400" height="700">
+<img src ="" alt="Screenshot" width="400" height="700">
+<img src ="" alt="Screenshot" width="400" height="700">
+<img src ="" alt="Screenshot" width="400" height="700">
+<img src ="" alt="Screenshot" width="400" height="700">
 
 
 ## Features
@@ -24,7 +24,7 @@
   ## Prototypes
 
 
-<img src ="https://github.com/Keyner32/Nostalgia/blob/master/Nostalgia%20.png" alt="First Page"  width="600" height="500"> 
+<img src ="" alt="First Page"  width="600" height="500"> 
 
 ## Entity relationship diagram 
 
