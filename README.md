@@ -1,5 +1,4 @@
-
-# Success Q
+# Success Q 
 <p align="center"> 
 <img src ="https://github.com/Keyner32/SuccessQuote/blob/master/basicKey.png?raw=true" alt="Pin Icon" width="200" height="200"> 
 </p>
