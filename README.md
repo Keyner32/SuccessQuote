@@ -24,7 +24,8 @@
   ## Prototypes
 
 
-<img src ="" alt="First Page"  width="600" height="500"> 
+<img src ="https://github.com/Keyner32/SuccessQuote/blob/master/proto.jpg" alt="First Page"  width="600" height="500"> 
+<img src ="https://github.com/Keyner32/SuccessQuote/blob/master/recycler.jpg" alt="First Page"  width="600" height="500"> 
 
 ## Entity relationship diagram 
 
