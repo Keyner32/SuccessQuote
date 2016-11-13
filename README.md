@@ -25,16 +25,16 @@
   - Tagging 
   
   ## Prototypes
+<img src ="https://github.com/Keyner32/SuccessQuote/blob/master/prototype.png" width="700" height="600"> 
 
-
-<img src ="https://github.com/Keyner32/SuccessQuote/blob/master/prototype.png" alt="First Page"  width="700" height="600"> 
-
-<img src ="https://github.com/Keyner32/SuccessQuote/blob/master/proto.jpg" alt="First Page"  width="200" height="300"> 
-<img src ="https://github.com/Keyner32/SuccessQuote/blob/master/recycler.jpg" alt="First Page"  width="200" height="300"> 
+<img src ="https://github.com/Keyner32/SuccessQuote/blob/master/proto.jpg" alt="First Page"  width="300" height="400"> 
+<img src ="https://github.com/Keyner32/SuccessQuote/blob/master/recycler.jpg" alt="First Page"  width="300" height="400"> 
 
 ## Inspiration
 
-<img src ="" alt="First Page" style="width:100px;height:200px;">
+<img src ="https://github.com/Keyner32/SuccessQuote/blob/master/tony_robbins.png" alt="First Page" style="width:100px;height:200px;">
+<img src ="https://github.com/Keyner32/SuccessQuote/blob/master/TaiLopez.png" alt="First Page" style="width:100px;height:200px;">
+<img src ="https://github.com/Keyner32/SuccessQuote/blob/master/thomas.jpg" alt="First Page" style="width:100px;height:200px;">
 
 
 ## User Stories
