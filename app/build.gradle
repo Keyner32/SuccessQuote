@@ -35,16 +35,11 @@ dependencies {
     compile 'de.hdodenhof:circleimageview:2.1.0'
     compile 'com.cleveroad:bubbleanimation-layout:1.0.0'
     compile 'com.github.t-kurimura:flickabledialog:7ff77f06d8'
+
     testCompile 'junit:junit:4.12'
 
     //Firebase
-    compile 'com.google.firebase:firebase-core:9.6.1'
-    compile 'com.google.firebase:firebase-database:9.6.1'
-    compile 'com.google.firebase:firebase-auth:9.6.1'
-    compile 'com.google.firebase:firebase-storage:9.6.1'
-    compile 'com.firebaseui:firebase-ui-database:0.4.0'
 
-    compile 'com.google.android.gms:play-services-auth:9.6.1'
 
-    apply plugin: 'com.google.gms.google-services'
+
 }
