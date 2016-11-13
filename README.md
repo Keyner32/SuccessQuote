@@ -32,9 +32,11 @@
 
 ## Inspiration
 
-<img src ="https://github.com/Keyner32/SuccessQuote/blob/master/tony_robbins.png" alt="First Page" style="width:100px;height:200px;">
-<img src ="https://github.com/Keyner32/SuccessQuote/blob/master/TaiLopez.png" alt="First Page" style="width:100px;height:200px;">
-<img src ="https://github.com/Keyner32/SuccessQuote/blob/master/thomas.jpg" alt="First Page" style="width:100px;height:200px;">
+<img src ="https://github.com/Keyner32/SuccessQuote/blob/master/tony_robbins.png" alt="First Page"  width="300" height="200"> 
+
+<img src ="https://github.com/Keyner32/SuccessQuote/blob/master/TaiLopez.png" alt="First Page"  width="300" height="200"> 
+
+<img src ="https://github.com/Keyner32/SuccessQuote/blob/master/thomas.jpg" alt="First Page"  width="300" height="200"> 
 
 
 ## User Stories
