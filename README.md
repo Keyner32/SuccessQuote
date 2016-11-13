@@ -27,6 +27,8 @@
   ## Prototypes
 
 
+<img src ="https://github.com/Keyner32/SuccessQuote/blob/master/prototype.png" alt="First Page"  width="700" height="600"> 
+
 <img src ="https://github.com/Keyner32/SuccessQuote/blob/master/proto.jpg" alt="First Page"  width="200" height="300"> 
 <img src ="https://github.com/Keyner32/SuccessQuote/blob/master/recycler.jpg" alt="First Page"  width="200" height="300"> 
 
