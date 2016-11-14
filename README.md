@@ -8,9 +8,9 @@
  Ethos is an appeal to ethics, and it is a means of convincing someone of the character or credibility of the persuader. Pathos is an appeal to emotion, and is a way of convincing an audience of an argument by creating an emotional response. Logos is an appeal to logic, and is a way of persuading an audience by reason.
  <img src ="https://github.com/Keyner32/SuccessQuote/blob/master/basicKey.png?raw=true" alt="Pin Icon" width="50" height="50"> 
 
-<img src ="" alt="Screenshot" width="400" height="700">
-<img src ="" alt="Screenshot" width="400" height="700">
-<img src ="" alt="Screenshot" width="400" height="700">
+<img src ="https://github.com/Keyner32/SuccessQuote/blob/master/Screenshot_1479081912.png" alt="Screenshot" width="400" height="700">
+<img src ="https://github.com/Keyner32/SuccessQuote/blob/master/Screenshot_1479082063.png" alt="Screenshot" width="400" height="700">
+<img src ="https://github.com/Keyner32/SuccessQuote/blob/master/Screenshot_1479082073.png" alt="Screenshot" width="400" height="700">
 <img src ="" alt="Screenshot" width="400" height="700">
 
 
