@@ -6,6 +6,12 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowSharedElementEnterTransition">
+            @transition/custom_transition
+        </item>
+        <item name="android:windowSharedElementExitTransition">
+            @transition/custom_transition
+        </item>
     </style>
 
     <style name="AppTheme.NoActionBar">

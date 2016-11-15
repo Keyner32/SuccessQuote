@@ -1,4 +1,4 @@
-package com.example.gabekeyner.successquote;
+package com.example.gabekeyner.successquote.JavaClasses;
 
 /**
  * Created by GabeKeyner on 11/2/2016.
@@ -14,12 +14,14 @@ public class QuoteHelper {
 
     String quote_body;
 
+    String quote_link;
 
-    public QuoteHelper()
-    {
+
+    public QuoteHelper() {
 
     }
-    public QuoteHelper(String author, String author_picture, String quote_category, String quote_body){
+
+    public QuoteHelper(String author, String author_picture, String quote_category, String quote_body) {
         this.author = author;
         this.author_picture = author_picture;
         this.quote_category = quote_category;
@@ -60,4 +62,11 @@ public class QuoteHelper {
         this.quote_category = quote_category;
     }
 
+    public String getQuote_link() {
+        return quote_link;
+    }
+
+    public void setQuote_link(String quote_link) {
+        this.quote_link = quote_link;
+    }
 }

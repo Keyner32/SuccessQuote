@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SuccessQuote</string>
+    <string name="app_name">Success Q</string>
 
     <string name="favorite">Favorite</string>
     <string name="call">Call</string>
@@ -42,6 +42,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="sign_out">Sign Out</string>
     <string name="app_name2">Success Q</string>
+    <string name="title_activity_post">PostActivity</string>
 
 
 </resources>

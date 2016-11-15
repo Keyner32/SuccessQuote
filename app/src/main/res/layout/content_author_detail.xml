@@ -6,7 +6,9 @@
     android:id="@+id/activity_detailed"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="20dp"
+    android:layout_marginTop="80dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginLeft="20dp"
     android:background="@android:color/darker_gray"
     android:paddingBottom="@dimen/padding_s"
     android:paddingEnd="@dimen/padding_m"
@@ -15,17 +17,17 @@
     app:bav_indicator_width="@dimen/indicator_width"
     tools:showIn="@layout/activity_author_detail"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.gabekeyner.successquote.AuthorDetailActivity">
+    tools:context="com.example.gabekeyner.successquote.Activitys.AuthorDetailActivity">
 
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/list_item_size"
-        android:layout_marginTop="5dp"
+        android:layout_height="180dp"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
         android:layout_marginBottom="5dp"
-        android:background="@android:color/white"
+        android:background="@color/colorAccent"
         app:bav_view_type="base_container">
-
 
         <TextView
             android:id="@+id/detail_quote2"
@@ -34,9 +36,10 @@
             android:fontFamily="sans-serif-smallcaps"
             android:maxLines="3"
             android:textAlignment="center"
+            android:layout_centerInParent="true"
             android:textAllCaps="true"
             android:textColor="@color/colorPrimary"
-            android:textSize="20sp"
+            android:textSize="25sp"
             android:textStyle="normal|italic"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
@@ -48,7 +51,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
-            android:layout_margin="5dp"
+           android:layout_marginRight="20dp"
             android:fontFamily="sans-serif-smallcaps"
             android:maxLines="1"
             android:textColor="@color/colorPrimary"
@@ -56,51 +59,6 @@
             android:textStyle="bold"
             />
 
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/fl_context_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:bav_view_type="context_container"
-        >
-
-        <ImageView
-            android:id="@+id/iv_share"
-            android:layout_width="@dimen/action_button_size"
-            android:layout_height="@dimen/action_button_size"
-            android:layout_centerInParent="true"
-            android:padding="@dimen/padding_h"
-            android:scaleType="centerInside"
-            android:src="@drawable/ic_share"
-            android:transitionName="@string/call"
-            />
-
-        <ImageView
-            android:id="@+id/iv_expand"
-            android:layout_width="@dimen/action_button_size"
-            android:layout_height="@dimen/action_button_size"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="@dimen/padding_m"
-            android:layout_marginStart="@dimen/padding_m"
-            android:layout_toStartOf="@id/iv_share"
-            android:padding="16dp"
-            android:scaleType="centerInside"
-            android:src="@drawable/ic_expand"
-            android:transitionName="@string/write"
-            />
-
-        <ImageView
-            android:id="@+id/iv_internet"
-            android:layout_width="@dimen/action_button_size"
-            android:layout_height="@dimen/action_button_size"
-            android:layout_centerVertical="true"
-            android:layout_toEndOf="@id/iv_expand"
-            android:padding="@dimen/padding_h"
-            android:scaleType="centerInside"
-            android:src="@drawable/ic_bio"
-            android:transitionName="@string/favorite"
-            />
 
     </RelativeLayout>
 

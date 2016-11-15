@@ -2,9 +2,11 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="350dp"
                 android:layout_height="400dp"
+                android:elevation="2dp"
                 xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:layout_gravity="center"
-                android:background="@drawable/background_dialog_quote">
+                android:background="@drawable/background_dialog_quote"
+    android:backgroundTint="@color/colorAccent">
 
 
     <EditText
@@ -31,17 +33,19 @@
         android:background="#f299"
         android:gravity="center"
         android:clickable="true"
+        android:transitionName="fabTransition"
         app:srcCompat="@drawable/ic_quote"
         android:layout_alignParentBottom="true"
         android:layout_alignEnd="@+id/dialog_body"
         android:layout_marginBottom="45dp"
         android:id="@+id/post"/>
 
-    <Spinner
+    <EditText
         android:layout_width="300dp"
-        android:layout_height="20dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="11dp"
-        android:id="@+id/spinner_category"
+        android:id="@+id/category"
+        android:hint="Category ..."
         android:layout_below="@+id/dialog_body"
         android:layout_alignStart="@+id/dialog_body"/>
 

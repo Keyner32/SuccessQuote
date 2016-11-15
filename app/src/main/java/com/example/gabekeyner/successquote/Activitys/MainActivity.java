@@ -1,5 +1,7 @@
-package com.example.gabekeyner.successquote;
+package com.example.gabekeyner.successquote.Activitys;
 
+import android.app.ActivityOptions;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -7,36 +9,33 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
+import android.transition.Transition;
+import android.transition.TransitionInflater;
+import android.util.Pair;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 
-import com.tkurimura.flickabledialog.FlickableDialog;
+import com.example.gabekeyner.successquote.Adapter;
+import com.example.gabekeyner.successquote.JavaClasses.QuoteHelper;
+import com.example.gabekeyner.successquote.R;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String TAG = Adapter.class.getSimpleName();
+
     RecyclerView recyclerView;
-
-
-
-
-    public static final String ANONYMOUS = "anonymous";
-    private String qPhotoUrl;
-    private String qUsername;
-
-    private Adapter qAdapter;
 
     private final String quote_authors[] = {
             "Eric Thomas",
             "Les Brown",
             "Tony Robbins",
             "Nick Vujicic",
-            "Arnold Schwarzenegger",
+            "Arnold Schwarz.",
             "Zig Ziglar",
-            "Dr. Wayne W.Dyer",
+            "Wayne W.Dyer",
             "Elon Musk",
             "Jim Rohn"
     };
@@ -44,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
             "http://speakerdata.s3.amazonaws.com/photo/image/839766/Eric_Thomas_Teena_Cathey.jpg",
             "https://pbs.twimg.com/profile_images/414511932063096832/9h-nqTVk.jpeg",
             "https://pbs.twimg.com/profile_images/540248015571660800/9qXSC-X9.png",
-            "https://www.steemimg.com/images/2016/09/05/nickvijucic334cd.jpg",
+            "http://cdn-www.you.co.za/wp-content/uploads/2015/04/Nick.jpg",
             "http://www.ew.com/sites/default/files/i/2015/03/02/arnold-schwarzenegger_0.jpg",
             "http://www.workingvoices.com/wp-content/uploads/zig_ziglar.jpg",
             "http://www.klru.org/wp-content/uploads/2013/02/drwayne.jpg",
@@ -73,28 +72,54 @@ public class MainActivity extends AppCompatActivity {
             "\"When something is important enough, you do it even if the odds are not in your favor.\"",
             "\"If you dont design your own life plan, chances are youll fall into someone elses plan. And guess what they have planned for you? Not much.\""
     };
+    private final String quote_links[] = {
+            "http://etinspires.com/",
+            "https://lesbrown.com/",
+            "https://www.tonyrobbins.com/",
+            "http://www.nickvujicic.com/",
+            "http://www.schwarzenegger.com/",
+            "https://www.ziglar.com/",
+            "http://www.drwaynedyer.com/",
+            "https://elonmusknews.org/#emn",
+            "https://www.jimrohn.com/"
+
+    };
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //Transition for FAB Animation
+        Transition transition = TransitionInflater.from(this).inflateTransition(R.transition.custom_transition);
+        getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
+        getWindow().setSharedElementEnterTransition(transition);
+        getWindow().setSharedElementReturnTransition(transition);
+
+        //Setting The Content & ToolBar Layouts
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        //[ InitViews ] Method to Display ArrayList Of Data
         initViews();
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        //FAB will Transition into the PostActivity
+        final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            FlickableDialog dialog = FlickableDialog.newInstance(R.layout.fragment_post_dialog);
-            dialog.show(getSupportFragmentManager(), dialog.getClass().getSimpleName());
+                Intent intent = new Intent(MainActivity.this, PostActivity.class);
+
+                android.util.Pair<View, String> pair = Pair.create((View) fab, "fabTransition");
+
+                ActivityOptions opt = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this, pair);
+
+                startActivityForResult(intent, RESULT_OK, opt.toBundle());
 
             }
         });
-//        recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
-
 
     }
 
@@ -105,11 +130,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initViews() {
+
+        //Initiating the RecyclerView
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
+
+        //OnCreate will Display a Linear Layout First
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
 
+        //Arraylist for Quotes Data & Sets it to the Adapter Class
         ArrayList<QuoteHelper> quoteHelpers = prepareData();
         Adapter adapter = new Adapter(getApplicationContext(), quoteHelpers);
         recyclerView.setAdapter(adapter);
@@ -117,6 +147,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private ArrayList<QuoteHelper> prepareData() {
+        //Uses QuoteHelper Class that set the [ Quotes Attributes ]
         ArrayList<QuoteHelper> quoteHelpers = new ArrayList<>();
         for (int i = 0; i < quote_authors.length; i++) {
             QuoteHelper quoteHelper = new QuoteHelper();
@@ -124,85 +155,35 @@ public class MainActivity extends AppCompatActivity {
             quoteHelper.setAuthor_picture(author_picture[i]);
             quoteHelper.setQuote_category(quote_category[i]);
             quoteHelper.setQuote_body(quote_body[i]);
+            quoteHelper.setQuote_link(quote_links[i]);
             quoteHelpers.add(quoteHelper);
-
 
         }
         return quoteHelpers;
     }
 
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        //Switch Case To Toggle Between Views
         int id = item.getItemId();
 
-
         switch (id) {
+            //[Linear View]
             case R.id.linearView:
-                LinearLayoutManager linearlayoutMang = new LinearLayoutManager(this);
-                linearlayoutMang.setOrientation(LinearLayoutManager.VERTICAL);
-                recyclerView.setLayoutManager(linearlayoutMang);
+                LinearLayoutManager linearlyMag = new LinearLayoutManager(this);
+                linearlyMag.setOrientation(LinearLayoutManager.VERTICAL);
+                recyclerView.setLayoutManager(linearlyMag);
                 break;
+            //[Grid View]
             case R.id.staggerdView:
                 StaggeredGridLayoutManager staggeredGridLayoutMang = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
                 recyclerView.setLayoutManager(staggeredGridLayoutMang);
                 break;
-
         }
-
-
         return super.onOptionsItemSelected(item);
     }
 
-//    //Bring the Views for the Main Activity
-//    private void initViews() {
-//        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
-//        recyclerView.setHasFixedSize(true);
-//        LinearLayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
-//        recyclerView.setLayoutManager(layoutManager);
-
-        // Write a message to the database
-//        FirebaseDatabase database = FirebaseDatabase.getInstance();
-//        DatabaseReference myRef = database.getReference("message");
-//
-//        myRef.setValue("Hello, World!");
-
-
-
-
-
-        //Displays quotes from the Database
-//        mFirebaseDatabaseReference = FirebaseDatabase.getInstance().getReference();
-
-
-
-
-        //Displays quotes from the Database
-//        qDatabase = FirebaseDatabase.getInstance().getReference();
-//        qChildRef = qDatabase.child("quotes");
-//        qAdapter = new Adapter(QuoteHelper.class, R.layout.card_view, Viewholder.class, qChildRef, getApplicationContext());
-//        recyclerView.setAdapter(qAdapter);
-//
-//        qChildRef.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(DataSnapshot dataSnapshot) {
-//                // This method is called once with the initial value and again
-//                // whenever data at this location is updated.
-//                QuoteHelper quoteHelper = dataSnapshot.getValue(QuoteHelper.class);
-//                Log.d(TAG, "Quote : " + quoteHelper.getAuthor());
-//            }
-//
-//            @Override
-//            public void onCancelled(DatabaseError error) {
-//                // Failed to read value
-//                Log.w(TAG, "Failed to read value.", error.toException());
-//            }
-//        });
-   // }
-// Read from the database
-
 
 //Todo make tranisitons to the Detail Activity
-
 
 }
