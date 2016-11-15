@@ -1,14 +1,12 @@
 # Success Q 
 <p align="center"> 
-
 <img src ="https://github.com/Keyner32/SuccessQuote/blob/master/success_final.png?raw=true" alt="Pin Icon" width="200" height="200"> 
 </p>
 ## Motivation
  Success Q : is a application that will give you the inspiratiion to become a successful person in life.
  Ethos is an appeal to ethics, and it is a means of convincing someone of the character or credibility of the persuader. Pathos is an appeal to emotion, and is a way of convincing an audience of an argument by creating an emotional response. Logos is an appeal to logic, and is a way of persuading an audience by reason.
  <img src ="https://github.com/Keyner32/SuccessQuote/blob/master/Screenshot%20(9).png" alt="Screenshot" width="1000" height="300">
- 
- <img src ="https://github.com/Keyner32/SuccessQuote/blob/master/basicKey.png?raw=true" alt="Pin Icon" width="50" height="50"> 
+
 
 <img src ="https://github.com/Keyner32/SuccessQuote/blob/master/linear.png" alt="Screenshot" width="400" height="700">
 <img src ="https://github.com/Keyner32/SuccessQuote/blob/master/grid.png" alt="Screenshot" width="400" height="700">
@@ -33,6 +31,10 @@
 <img src ="https://github.com/Keyner32/SuccessQuote/blob/master/recycler.jpg" alt="First Page"  width="300" height="400"> 
 
 ## Inspiration
+
+<p align="center"> 
+<img src ="https://github.com/Keyner32/SuccessQuote/blob/master/basicKey.png?raw=true" alt="Pin Icon" width="350" height="350"> 
+</p>
 
 <img src ="https://github.com/Keyner32/SuccessQuote/blob/master/tony_robbins.png" alt="First Page"  width="300" height="200"> 
 
