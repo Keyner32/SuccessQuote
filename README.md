@@ -38,15 +38,16 @@
 </p>
 
 
-<img src ="https://github.com/Keyner32/SuccessQuote/blob/master/tony_robbins.png" alt="First Page"  width="300" height="200"> 
+<img src ="https://github.com/Keyner32/SuccessQuote/blob/master/tony_robbins.png" alt="First Page"  width="200" height="100"> 
+
 Tony Robbins is an American businessman, author, and philanthropist. He became well known from his infomercials and self-help books
 known to steer people in the right direction for successful life.
 
-<img src ="https://github.com/Keyner32/SuccessQuote/blob/master/TaiLopez.png" alt="First Page"  width="300" height="200"> 
+<img src ="https://github.com/Keyner32/SuccessQuote/blob/master/TaiLopez.png" alt="First Page"  width="200" height="100"> 
 
 Tai Lopez is an investor, partner, or advisor to over 20 multi-million dollar businesses. Through his popular book club and podcasts Tai shares advice on how to achieve health, wealth, love, and happiness with 1.4 million people in 40 countries.
 
-<img src ="https://github.com/Keyner32/SuccessQuote/blob/master/thomas.jpg" alt="First Page"  width="300" height="200"> 
+<img src ="https://github.com/Keyner32/SuccessQuote/blob/master/thomas.jpg" alt="First Page"  width="200" height="100"> 
 
 Eric D. Thomas is an American motivational speaker, author and minister. Speeches by Thomas have been widely viewed and are popular on YouTube.
 
