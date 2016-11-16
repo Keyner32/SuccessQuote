@@ -17,13 +17,13 @@
 
 ## Features
 
-  - Post Feature: Picture/Title/Description/Comment
-  - Emphasizing on the picture
-  - Camera Feature/Pick from Gallery
-  - Group Message
-  - Commenting Secti 
-  -FaceBook / Instagram Integration 
-  - Tagging 
+  - Post Feature: Quote/Name/Body/Category
+  - Emphasizing on the quotes
+  - Toggle Views
+  - Research Auhors
+  - Web View of Authors Websites
+  - View Animations
+  - FaceBook / Google Integration 
   
   ## Prototypes
 <img src ="https://github.com/Keyner32/SuccessQuote/blob/master/prototype.png" width="700" height="600"> 
