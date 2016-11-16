@@ -73,7 +73,8 @@
         android:layout_marginLeft="200dp"
         android:layout_marginTop="450dp"
         android:src="@drawable/ic_bio"
-        android:tint="@color/colorPrimary"/>
+        android:tint="@color/colorPrimary"
+        android:clickable="true"/>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/share_quote"
@@ -83,7 +84,8 @@
         android:layout_marginRight="200dp"
         android:layout_marginTop="450dp"
         android:src="@drawable/ic_share"
-        android:tint="@color/colorPrimary"/>
+        android:tint="@color/colorPrimary"
+        android:clickable="true"/>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/expand_view"
@@ -92,7 +94,8 @@
         android:layout_gravity="center"
         android:layout_marginTop="450dp"
         android:src="@drawable/ic_expand"
-        android:tint="@color/colorPrimary"/>
+        android:tint="@color/colorPrimary"
+        android:clickable="true"/>
 
     <WebView
         android:id="@+id/quote_link"

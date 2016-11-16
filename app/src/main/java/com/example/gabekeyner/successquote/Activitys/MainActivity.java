@@ -37,7 +37,15 @@ public class MainActivity extends AppCompatActivity {
             "Zig Ziglar",
             "Wayne W.Dyer",
             "Elon Musk",
-            "Jim Rohn"
+            "Jim Rohn",
+            "Oprah Winfrey",
+            "Helen Keller",
+            "Mother Teresa",
+            "Richard Branson",
+            "Tai Lopez",
+            "Warren Buffett",
+            "Henry Ford"
+
     };
     private final String author_picture[] = {
             "http://speakerdata.s3.amazonaws.com/photo/image/839766/Eric_Thomas_Teena_Cathey.jpg",
@@ -48,7 +56,14 @@ public class MainActivity extends AppCompatActivity {
             "http://www.workingvoices.com/wp-content/uploads/zig_ziglar.jpg",
             "http://www.klru.org/wp-content/uploads/2013/02/drwayne.jpg",
             "https://pi.tedcdn.com/r/pe.tedcdn.com/images/ted/2534551796ee0a2638b462ce82e33b65091b1d42_1600x1200.jpg?cb=05112016&quality=89&w=800",
-            "http://dicasdosalgueiro.pt/wp-content/uploads/2016/01/Darren_Hardy_Interviews_Jim_Rohn_0.jpg"
+            "http://dicasdosalgueiro.pt/wp-content/uploads/2016/01/Darren_Hardy_Interviews_Jim_Rohn_0.jpg",
+            "https://s-media-cache-ak0.pinimg.com/originals/5f/1d/5b/5f1d5ba084a00f066cc92958b2aba9f1.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Helen_KellerA.jpg/220px-Helen_KellerA.jpg",
+            "http://www.thefamouspeople.com/profiles/images/mother-teresa-13.jpg",
+            "https://www.caymansummit.com/wp-content/uploads/2016/01/Richard-speaker-page.png",
+            "http://dreambigstartsmall.com/wp-content/uploads/2016/06/about-tai.jpg",
+            "https://740605017aaa07ce2abf-6092796610ec8cb18b2dc76aa16c3cf0.ssl.cf2.rackcdn.com/news_thumbnails/WARRENBuffetT_9.jpg",
+            "http://www.thefamouspeople.com/profiles/images/henry-ford-18.jpg"
     };
     private final String quote_category[] = {
             "Motivational",
@@ -59,7 +74,14 @@ public class MainActivity extends AppCompatActivity {
             "Business",
             "Mindset",
             "Entrepreneur",
-            "Mindset"
+            "Mindset",
+            "Personality",
+            "Writer",
+            "Philanthropy",
+            "Business",
+            "Business",
+            "Business",
+            "Business"
     };
     private final String quote_body[] = {
             "\"When you want to succeed as bad as you want to breathe, then youll be successful.\"",
@@ -70,7 +92,15 @@ public class MainActivity extends AppCompatActivity {
             "\"What you get by achieving your goals is not as important as what you become by achieving your goals.\"",
             "\"Be miserable. Or motivate yourself. Whatever has to be done, its always your choice.\"",
             "\"When something is important enough, you do it even if the odds are not in your favor.\"",
-            "\"If you dont design your own life plan, chances are youll fall into someone elses plan. And guess what they have planned for you? Not much.\""
+            "\"If you dont design your own life plan, chances are youll fall into someone elses plan. And guess what they have planned for you? Not much.\"",
+            "\"Passion is energy. Feel the power that comes from focusing on what excites you.\"",
+            "\"When one door of happiness closes, another opens, but often we look so long at the closed door that we do not see the one which has been opened for us.\"",
+            "\"Not all of us can do great things. But we can do small things with great love.\"",
+            "\"Every risk is worth taking as long as it's for a good cause and contributes to a good life.\"",
+            "\"If you can stay cool in the middle of tough times, you will rise above the masses and shine when everyone else is panicking.\"",
+            "\"Its better to hang out with people better than you. Pick out associates whose behavior is better than yours and youll drift in that direction.\"",
+            "\"Whether you think you can, or you think you cant youre right.\""
+
     };
     private final String quote_links[] = {
             "http://etinspires.com/",
@@ -81,7 +111,14 @@ public class MainActivity extends AppCompatActivity {
             "https://www.ziglar.com/",
             "http://www.drwaynedyer.com/",
             "https://elonmusknews.org/#emn",
-            "https://www.jimrohn.com/"
+            "https://www.jimrohn.com/",
+            "http://www.oprah.com/index.html",
+            "http://www.biography.com/people/helen-keller-9361967",
+            "http://www.motherteresa.org/",
+            "https://www.virgin.com/richard-branson",
+            "http://www.tailopez.com/",
+            "http://www.warrenbuffett.com/",
+            "https://www.thehenryford.org/"
 
     };
 
@@ -182,8 +219,5 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
-
-//Todo make tranisitons to the Detail Activity
 
 }

@@ -94,6 +94,7 @@ public class PostActivity extends AppCompatActivity {
         AnimationUtil.setScaleDialog(postDialog);
         fab.setVisibility(View.INVISIBLE);
     }
+
     //Animate the Floating Action Button to Circular Reveal
     private void revealView() {
 
@@ -112,6 +113,7 @@ public class PostActivity extends AppCompatActivity {
 
 
     }
+
     //Method to Post a Quote to the ArrayList
     private void addPost() {
         String newAuthor = postName.getText().toString();

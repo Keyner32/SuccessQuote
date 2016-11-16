@@ -3,6 +3,7 @@ package com.example.gabekeyner.successquote;
 import android.content.Context;
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.util.Pair;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,6 +21,10 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+
+import static com.example.gabekeyner.successquote.R.id.author_picture;
+import static com.example.gabekeyner.successquote.R.id.quote_link;
+import static com.example.gabekeyner.successquote.R.id.textAuthor;
 
 
 /**
@@ -70,7 +75,13 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openDetailActivity(quote.getAuthor(), quote.getAuthor_picture(), quote.getQuote_category(), quote.getQuote_body(), quote.getQuote_link());
+                openDetailActivity(
+                        quote.getAuthor(),
+                        quote.getAuthor_picture(),
+                        quote.getQuote_category(),
+                        quote.getQuote_body(),
+                        quote.getQuote_link()
+                );
                 Toast.makeText(context, "More on " + quote.getAuthor(), Toast.LENGTH_SHORT).show();
             }
         });
@@ -100,12 +111,11 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         public EditText postName, postBody, postCategory;
 
 
-
-        public ViewHolder(View itemView) {
+        public ViewHolder(final View itemView) {
             super(itemView);
 
             //Instantiating Main Activity Views By ID
-            authorImage = (CircleImageView) itemView.findViewById(R.id.author_picture);
+            authorImage = (CircleImageView) itemView.findViewById(author_picture);
             authorText = (TextView) itemView.findViewById(R.id.textAuthor);
             categoryText = (TextView) itemView.findViewById(R.id.textCategory);
             bodyText = (TextView) itemView.findViewById(R.id.detail_quote);
@@ -115,7 +125,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             authorTextDetail = (TextView) itemView.findViewById(R.id.author_head_name);
             bodyTextDetail = (TextView) itemView.findViewById(R.id.detail_quote2);
             categoryTextDetail = (TextView) itemView.findViewById(R.id.detail_category);
-            linkTextDetail = (WebView) itemView.findViewById(R.id.quote_link);
+            linkTextDetail = (WebView) itemView.findViewById(quote_link);
             bioView = (FloatingActionButton) itemView.findViewById(R.id.open_link);
             expandView = (FloatingActionButton) itemView.findViewById(R.id.expand_view);
             shareView = (FloatingActionButton) itemView.findViewById(R.id.share_quote);
@@ -127,6 +137,23 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             postCategory = (EditText) itemView.findViewById(R.id.category);
             quoteView = (RecyclerView) itemView.findViewById(R.id.recyclerView);
 
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+
+                    View authorImage = view.findViewById(author_picture);
+                    View authorName = view.findViewById(textAuthor);
+
+                    Pair<View, String> pair1 = Pair.create((View)authorName, "authorNameTransition");
+//                    ActivityOptions opt1 = ActivityOptions.makeSceneTransitionAnimation((Activity) view.getContext(), pair1);
+
+
+
+
+                }
+            });
         }
     }
 

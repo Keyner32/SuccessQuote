@@ -20,7 +20,7 @@ public class AnimationUtil {
     private final static int SCALE_DURATION = 1900;
     private final static int SCALE_DURATION_ITEM = 1500;
     private final static int FADE_DURATION = 2200;
-    private final static int SCALE_DURATION_DIALOG = 2200;
+    private final static int SCALE_DURATION_DIALOG = 2000;
 
     public static void animate(RecyclerView.ViewHolder holder, boolean goesDown) {
         AnimatorSet animatorSet = new AnimatorSet();
