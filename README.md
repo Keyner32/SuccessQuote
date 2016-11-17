@@ -3,8 +3,7 @@
 <img src ="https://github.com/Keyner32/SuccessQuote/blob/master/success_final.png?raw=true" alt="Pin Icon" width="200" height="200"> 
 </p>
 ## Motivation
- Success Q : is a application that will give you the inspiratiion to become a successful person in life.
- Ethos is an appeal to ethics, and it is a means of convincing someone of the character or credibility of the persuader. Pathos is an appeal to emotion, and is a way of convincing an audience of an argument by creating an emotional response. Logos is an appeal to logic, and is a way of persuading an audience by reason.
+ Success Q : is a application that will give you the inspiratiion to become a successful person in life and will show you inspiring quotes from successful motivational speakers and includes a Web View that displays more information about the obstacles and challenges they overcame. I utilized Google Material Design as well as bringing a more dynamic and more user friendly UI by giving a face to each quote uses credibility to give the user a encouraged mindset. Another feature is to add your own personal quotes to the app so you can soon start your way to a successful driven life. I hope to soon have this app on the Google Play Store soon enough I'll keep an update for those who are interested but I mean who doesn't want to be successful right !
  
  <img src ="https://github.com/Keyner32/SuccessQuote/blob/master/Screenshot%20(9).png" alt="Screenshot" width="870" height="300">
 
