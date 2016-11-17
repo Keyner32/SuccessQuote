@@ -3,8 +3,7 @@
 <img src ="https://github.com/Keyner32/SuccessQuote/blob/master/success_final.png?raw=true" alt="Pin Icon" width="200" height="200"> 
 </p>
 ## Motivation
- Success Q : is a application that will give you the inspiratiion to become a successful person in life.
- Ethos is an appeal to ethics, and it is a means of convincing someone of the character or credibility of the persuader. Pathos is an appeal to emotion, and is a way of convincing an audience of an argument by creating an emotional response. Logos is an appeal to logic, and is a way of persuading an audience by reason.
+ Success Q : is a application that will give you the inspiratiion to become a successful person in life and will show you inspiring quotes from successful motivational speakers and includes a Web View that displays more information about the obstacles and challenges they overcame. I utilized Google Material Design as well as bringing a more dynamic and more user friendly UI by giving a face to each quote uses credibility to give the user a encouraged mindset. Another feature is to add your own personal quotes to the app so you can soon start your way to a successful driven life. I hope to soon have this app on the Google Play Store soon enough I'll keep an update for those who are interested but I mean who doesn't want to be successful right !
  
  <img src ="https://github.com/Keyner32/SuccessQuote/blob/master/Screenshot%20(9).png" alt="Screenshot" width="870" height="300">
 
@@ -17,13 +16,13 @@
 
 ## Features
 
-  - Post Feature: Picture/Title/Description/Comment
-  - Emphasizing on the picture
-  - Camera Feature/Pick from Gallery
-  - Group Message
-  - Commenting Secti 
-  -FaceBook / Instagram Integration 
-  - Tagging 
+  - Post Feature: Quote/Name/Body/Category
+  - Emphasizing on the quotes
+  - Toggle Views
+  - Research Auhors
+  - Web View of Authors Websites
+  - View Animations
+  - FaceBook / Google Integration 
   
   ## Prototypes
 <img src ="https://github.com/Keyner32/SuccessQuote/blob/master/prototype.png" width="700" height="600"> 
@@ -37,12 +36,19 @@
 <img src ="https://github.com/Keyner32/SuccessQuote/blob/master/basicKey.png?raw=true" alt="Pin Icon" width="350" height="350"> 
 </p>
 
-<img src ="https://github.com/Keyner32/SuccessQuote/blob/master/tony_robbins.png" alt="First Page"  width="300" height="200"> 
 
-<img src ="https://github.com/Keyner32/SuccessQuote/blob/master/TaiLopez.png" alt="First Page"  width="300" height="200"> 
+<img src ="https://github.com/Keyner32/SuccessQuote/blob/master/tony_robbins.png" alt="First Page"  width="100" height="100"> 
 
-<img src ="https://github.com/Keyner32/SuccessQuote/blob/master/thomas.jpg" alt="First Page"  width="300" height="200"> 
+Tony Robbins is an American businessman, author, and philanthropist. He became well known from his infomercials and self-help books
+known to steer people in the right direction for successful life.
 
+<img src ="https://github.com/Keyner32/SuccessQuote/blob/master/TaiLopez.png" alt="First Page"  width="100" height="100"> 
+
+Tai Lopez is an investor, partner, or advisor to over 20 multi-million dollar businesses. Through his popular book club and podcasts Tai shares advice on how to achieve health, wealth, love, and happiness with 1.4 million people in 40 countries.
+
+<img src ="https://github.com/Keyner32/SuccessQuote/blob/master/thomas.jpg" alt="First Page"  width="100" height="100"> 
+
+Eric D. Thomas is an American motivational speaker, author and minister. Speeches by Thomas have been widely viewed and are popular on YouTube.
 
 ## User Stories
 
