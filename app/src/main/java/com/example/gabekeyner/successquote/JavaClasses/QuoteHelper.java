@@ -3,7 +3,7 @@ package com.example.gabekeyner.successquote.JavaClasses;
 /**
  * Created by GabeKeyner on 11/2/2016.
  */
-
+//This class is used as a model for a Quote
 public class QuoteHelper {
 
     String author;

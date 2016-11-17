@@ -26,7 +26,6 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:fontFamily="sans-serif-smallcaps"
-            android:maxLines="3"
             android:textAlignment="center"
             android:textAllCaps="true"
             android:textColor="@color/colorPrimary"

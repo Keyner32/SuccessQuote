@@ -169,8 +169,8 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         context.startActivity(intent);
     }
 
-    public void addQuote(int position, QuoteHelper posts) {
-        quotes.add(position, posts);
+    public void addQuote(QuoteHelper posts) {
+        quotes.add(posts);
         notifyDataSetChanged();
     }
 }
